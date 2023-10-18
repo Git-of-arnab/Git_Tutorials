@@ -1,0 +1,56 @@
+1 - Setup the Github Repository
+	a)Create a new environment
+	b)create a setup.py
+	c)create requirements.txt
+2 - Install Git tool
+It is installed in:
+C:\Users\arnchand\AppData\Local\Programs\Git
+
+Check git version to see whether installed properly or not in command prompt
+C:\Users\arnchand>git --version
+git version 2.42.0.windows.2
+
+To use git in Anaconda environment, you need to install git for conda:
+---------------------------------------------------------------------
+1. Open Anaconda command prompt
+2. Go to the path where anaconda is installed
+3. Run the below command
+(base) C:\Users\arnchand\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Anaconda3 (64-bit)>conda install -c anaconda git
+4. Open the anaconda prompt to check the installed version
+(base) C:\Users\arnchand\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Anaconda3 (64-bit)>git --version
+git version 2.40.1.windows.1
+
+Working with conda and VS code:
+-------------------------------
+1. Open Anaconda command prompt
+2. Goto the folder where you will be working
+3. run "code ."
+
+(base) C:\Users\arnchand>cd C:\Users\arnchand\Desktop\Important Doc\Machine-Learning\MLOps\End-to-End-Project
+
+(base) C:\Users\arnchand\Desktop\Important Doc\Machine-Learning\MLOps\End-to-End-Project>code .
+
+4. VS code opens
+5. Hover over to terminal and open terminal
+6. create a python environment
+conda create -p venv python==3.8 -y
+
+Activate the environment:
+conda activate venv/
+
+7. Next we will clone our Github and sync our repo with the code
+PS C:\Users\arnchand\Desktop\Important Doc\Machine-Learning\MLOps\End-to-End-Project> git init
+->Create a README.md file under the current working folder in the VS code : Give descriptions of the project(Or later you make some changes, you can follow the same steps) and save
+->Add it to github repository
+git add README.md
+git commit -m "First commit"
+git branch -M main
+git remote add origin https://github.com/Git-of-arnab/End-to-End-ML_Projects.git
+git remote -v : To check the fetch and push paths
+Finally, push the readme.md to github repo:
+
+git push -u origin main
+PS C:\Users\arnchand\Desktop\Important Doc\Machine-Learning\MLOps\End-to-End-Project> git config --global user.name "Arnab Chandra"
+PS C:\Users\arnchand\Desktop\Important Doc\Machine-Learning\MLOps\End-to-End-Project> git config --global user.email hello.arnab.chandra@gmail.com
+fatal: could not read Username for 'https://github.com': No such file or directory
+
